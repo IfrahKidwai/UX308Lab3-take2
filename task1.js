@@ -1,18 +1,8 @@
-/*/ Take a variable with distance in **kilometres** as input and output the same distance *converted* to **miles**
-
-let kilometers = 15
-
-let miles = kilometers/1.609
-
-console.log(`${kilometers} kilometers is ${miles} miles`);
-/*/
-
-
-function kilometerstomiles (kiloinput){
-    let miles = kiloinput * 0.621371;
-    return miles;
+//1) given a temperature in kelvin convert to fahrenheit
+function kelvinToFahrenheit(K) {
+    // (K − 273.15) × 9/5 + 32 = °F
+    let fahrenheit = (K - 273.15) * (9/5) + 32
+    return fahrenheit;
 }
 
-console.log(kilometerstomiles(6));
-console.log(kilometerstomiles(2));
-console.log(kilometerstomiles(8));
+console.log(kelvinToFahrenheit(10))

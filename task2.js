@@ -1,38 +1,9 @@
-/*/ Take a variable with a **numericgrade** and output the corresponding **lettergrade**
+// 2) convert a windspeed to  a description using The Beaufort Wind Scale.
 
-let numericgrade = 60
-
-let lettergrade = "f" 
-
-if (numericgrade >=90){
-    lettergrade="A+"
-} else if (numericgrade >=80){
-    lettergrade= "A"
-}else if (numericgrade >=70){
-    lettergrade= "B"
-}else if (numericgrade >=60){
-    lettergrade= "c"
-}else if (numericgrade >=50){
-    lettergrade= "D"
+function calculateWindSpeed (scale){
+    // v = 0.836 B^3/2
+    let velocity = (0.838)*(scale^(3/2));
+    return velocity;
 }
-console.log(`${numericgrade} numericgrade is ${lettergrade} lettergrade`)
-/*/
 
-function nGrade (numericgrade){
-    if (numericgrade >=90){
-        return("A+");
-    } else if (numericgrade >=80){
-        return("A");
-    }else if (numericgrade >=70){
-        return("B");
-    }else if (numericgrade >=60){
-        return("C");
-    }else if (numericgrade >=50){
-        return("D");
-    }else if (numericgrade <50){
-        return("F");
-    }
-}
-console.log(nGrade(68));
-console.log(nGrade(98));
-console.log(nGrade(30));
+console.log(calculateWindSpeed(9.5))

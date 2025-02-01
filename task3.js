@@ -1,18 +1,17 @@
-/*/ Write a program to calculate the **volume** of a cylinder. Start with a variable that contains the **diameter** of the end of the circle, and another variable that references the **height** in meters.
+//3) calculate the volume of an equilateral triangle prism from the length of one side of the triangle and the length of the flat edge
 
-let radius = 1
+function equilateralTrianglePrismVolume(sideLength, prismLength) {
+    if (sideLength <= 0 || prismLength <= 0) {
+        
+    }
 
-let height = 2
+    const triangleArea = (Math.sqrt(3) / 4) * Math.pow(sideLength, 2);
+    const volume = triangleArea * prismLength;
 
-let volume = Math.PI*radius**2*height
-
-console.log(`the volume of a cylinder with the radius ${radius} and the height ${height} is ${volume}`);
-/*/
-
-function cylinderVol (radius, height){
-    let volCylinder = Math.PI*radius**2*height;
-    return volCylinder;
+    return volume;
 }
-console.log(cylinderVol(76, 45));
-console.log(cylinderVol(56, 67));
-console.log(cylinderVol(24, 33));
+
+const sideLength = 5;
+const prismLength = 10;
+const volume = equilateralTrianglePrismVolume(sideLength, prismLength);
+console.log(`The volume of the equilateral triangle prism is ${volume.toFixed(2)} cubic units.`);
